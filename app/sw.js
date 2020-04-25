@@ -17,8 +17,7 @@
  *
  */
 
-const version = "0.6.18";
-const cacheName = `airhorner-${version}`;
+const cacheName = `cornhole`;
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(cacheName).then(cache => {
@@ -26,11 +25,7 @@ self.addEventListener('install', e => {
         `/`,
         `/index.html`,
         `/styles/main.css`,
-        `/scripts/main.min.js`,
-        `/scripts/comlink.global.js`,
-        `/scripts/messagechanneladapter.global.js`,
-        `/scripts/pwacompat.min.js`,
-        `/sounds/airhorn.mp3`
+        `/scripts/main.js`
       ])
           .then(() => self.skipWaiting());
     })
